@@ -1,9 +1,9 @@
 # Jobs
 # VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+- company: GEP
+  position: Senior Data Scientist
+  duration: Jul, 2021 &mdash; Present
+  summary: <ul class="resume-item-list"><li>Leading a CV & Search Product which includes end-to-end product lifecycle management, Including engineering, software architecture design, Machine Learning, deployment, product roadmap design & people management </li><li>Developed a generic framework for API testing (both Sync and Async)</li></ul> Skills: Python, Azure, MLOps (Docker, Kubernetes), ElasticSearch, SVM, Unit Testing & API Testing, Azure OCR & Form Recognizers, SQL
 
 # Director of Digital Stratgy
 - company: United Nations Human Rights Council
