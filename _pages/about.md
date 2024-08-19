@@ -10,7 +10,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Welcome to my anxious world.</p>
-    
+
 news: False # includes a list of news items
 selected_papers: False # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,7 +26,7 @@ as of june 1st, i'm on a career break for a couple of months but during this tim
 
 when i'm not working i'm probably thinking about how i can improve my strength & form in pull-ups and dreaming about muscle ups 🏋️ or learning about the Xs and Os of basketball. i occasionally pick up a book (mainly it's on my kindle :P) too trying to learn more about indian history, world history but won't shy away from a good fiction (sci fi preferred) or some new topic that looks interesting to me.
 
-<!-- 
+<!--
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
