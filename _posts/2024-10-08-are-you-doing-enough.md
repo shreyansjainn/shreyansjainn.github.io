@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Myth of Are you Doing Enough?
+title: Myth of 'Are you Doing Enough?'
 date: 2024-10-08 12:40:16
 description:
 tags:
