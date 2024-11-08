@@ -6,7 +6,7 @@
     "email": "jshrey8@gmail.com",
     "phone": "",
     "url": "",
-    "summary": "Self Taught Data Scientist with 8 years of Applied ML work ex, trying to make it into AI safety and interpretability research.",
+    "summary": "Self Taught Data Scientist with 8 years of Applied ML work ex, Interested in AI safety and interpretability research.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -22,6 +22,19 @@
       }
     ]
   },
+  "projects": [
+    {
+      "name": "Visualize Training",
+      "summary": "Package for creating visualizations for the Training Dynamics of a Neural Network.",
+      "highlights": [
+        "Package Creation for Visualizing Training Dynamics",
+        "Experiments on Attention rate as a hyperparameter for Generalization Strategies"
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "Present",
+      "url": ""
+    }
+  ],
   "work": [
     {
       "name": "GEP Worldwide",
@@ -138,7 +151,7 @@
       "icon": "fa-solid fa-tag",
       "keywords": ["Multi Agent RL", "Offline RL"]
     }
-  ],
+  ]
   // "references": [
   //   {
   //     "name": "Professor John Doe",
@@ -151,17 +164,4 @@
   //     "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
   //   }
   // ],
-  "projects": [
-    {
-      "name": "Visualize Training",
-      "summary": "Package for creating visualizations for the Training Dynamics of a Neural Network.",
-      "highlights": [
-        "Package Creation for Visualizing Training Dynamics",
-        "Experiments on Attention rate as a hyperparameter for Generalization Strategies"
-      ],
-      "startDate": "2024-01-01",
-      "endDate": "Present",
-      "url": ""
-    }
-  ]
 }
