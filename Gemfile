@@ -23,7 +23,6 @@ group :jekyll_plugins do
     gem 'webrick'
     gem 'observer'
     gem 'logger'
-    gem 'jekyll-katex'
 end
 group :other_plugins do
     gem 'css_parser'

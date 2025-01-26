@@ -19,13 +19,13 @@ This question was listed in Neel Nanda's [200 Concrete Open Problems in Mechani
 
 The ReLU output model is a toy model replication of a neural network showcasing the mapping of features (5 input features) to hidden dimensions (2 hidden dimensions) where superposition can be introduced by changing the sparsity of input features. For a set of input features x∈Rn and a hidden layer vector h∈Rm, where n>>m, the model is defined as follows:
 
-{% katex %}
+$$
 h=Wx
-{% endkatex %}
+$$
 
-{% katex %}
+$$
 x^′=ReLU(W^{T}h+b)
-{% endkatex %}
+$$
 
 This model showcases how a large set of input features can be represented in a much smaller dimensional vector in a state of superposition by increasing the sparsity of the input features (sparsity tries to replicate the real-world data distribution where certain concepts are sparsely present throughout the training set). This concept and observations were first introduced in Anthropic's [Toy Models of Superposition paper](https://transformer-circuits.pub/2022/toy_model/index.html).
 
