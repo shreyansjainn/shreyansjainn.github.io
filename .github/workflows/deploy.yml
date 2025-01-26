@@ -72,6 +72,11 @@ jobs:
         with:
           ruby-version: "3.4.1"
           bundler-cache: true
+      - name: Clear Bundler cache
+        run: |
+          bundle config --local path vendor/bundle
+          bundle config --local clean true
+          bundle clean --force
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
