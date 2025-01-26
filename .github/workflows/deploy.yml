@@ -67,6 +67,11 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - name: Clear Bundler cache
+        run: |
+          bundle config --local path vendor/bundle
+          bundle config --local clean true
+          bundle clean --force
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
