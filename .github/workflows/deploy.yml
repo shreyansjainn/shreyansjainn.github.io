@@ -95,8 +95,15 @@ jobs:
         run: |
           gem install feedjira -v 3.2.4 --no-document
           gem install libv8-node -v 22.5.1.0 -- --with-system-v8
+          gem install mini_racer -v 0.6.2 -- --with-system-v8
         timeout-minutes: 5
-
+      - name: Cache Bundler gems
+        uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
       - name: Bundle Install with dependencies
         run: |
           bundle config build.libv8-node --with-system-v8
