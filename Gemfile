@@ -26,6 +26,8 @@ group :jekyll_plugins do
 end
 group :other_plugins do
     gem 'css_parser'
-    gem 'feedjira'
+    gem 'feedjira', '3.2.4'
+    gem 'nokogiri', '~> 1.16.0'
+    gem 'loofah', '~> 2.22.0'
     gem 'httparty'
 end

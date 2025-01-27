@@ -149,7 +149,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.6.5)
-    loofah (2.24.0)
+    loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     matrix (0.4.2)
@@ -163,10 +163,8 @@ GEM
       bigdecimal (~> 3.1)
     namae (1.2.0)
       racc (~> 1.7)
-    nokogiri (1.18.2)
+    nokogiri (1.16.8)
       mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
-    nokogiri (1.18.2-aarch64-linux-gnu)
       racc (~> 1.4)
     observer (0.1.2)
     pathutil (0.16.2)
@@ -205,7 +203,7 @@ PLATFORMS
 DEPENDENCIES
   classifier-reborn
   css_parser
-  feedjira
+  feedjira (= 3.2.4)
   httparty
   jekyll
   jekyll-archives
@@ -225,7 +223,9 @@ DEPENDENCIES
   jekyll-twitter-plugin
   jemoji
   logger
+  loofah (~> 2.22.0)
   mini_racer
+  nokogiri (~> 1.16.0)
   observer
   unicode_utils
   webrick
