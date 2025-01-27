@@ -94,6 +94,7 @@ jobs:
       - name: Pre-install problematic gems
         run: |
           gem install feedjira -v 3.2.4 --no-document
+          gem install libv8-node -v 22.5.1.0 -- --with-system-v8
         timeout-minutes: 5
 
       - name: Bundle Install with dependencies
