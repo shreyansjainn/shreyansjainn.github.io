@@ -142,8 +142,6 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     latex-decode (0.4.0)
-    libv8-node (22.5.1.0)
-    libv8-node (22.5.1.0-aarch64-linux)
     liquid (4.0.4)
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -156,8 +154,6 @@ GEM
     mercenary (0.4.0)
     mini_mime (1.1.5)
     mini_portile2 (2.8.8)
-    mini_racer (0.13.0)
-      libv8-node (~> 22.5.1.0)
     minitest (5.25.4)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
@@ -224,7 +220,6 @@ DEPENDENCIES
   jemoji
   logger
   loofah (~> 2.22.0)
-  mini_racer
   nokogiri (~> 1.16.0)
   observer
   unicode_utils
