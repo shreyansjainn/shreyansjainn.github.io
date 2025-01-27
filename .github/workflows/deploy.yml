@@ -1,5 +1,4 @@
 name: Deploy site
-
 on:
   push:
     branches:
@@ -56,26 +55,38 @@ on:
       - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential
+        timeout-minutes: 5
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.4.1"
-          bundler-cache: true
+          bundler-cache: false # Changed to false to handle dependencies manually
+
+      - name: Pre-install problematic gems
+        run: |
+          gem install feedjira -v 3.2.4 --no-document
+        timeout-minutes: 5
+
+      - name: Bundle Install
+        run: |
+          bundle config set --local path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+        timeout-minutes: 10
+
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -83,15 +94,24 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
-      - name: Install and Build 🔧
+
+      - name: Install Python Dependencies
         run: |
           pip3 install --upgrade jupyter
+        timeout-minutes: 5
+
+      - name: Build Jekyll
+        run: |
           export JEKYLL_ENV=production
           bundle exec jekyll build
+        timeout-minutes: 10
+
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+        timeout-minutes: 5
+
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
