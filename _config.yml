@@ -217,6 +217,7 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
+  math_engine: mathjax
   syntax_highlighter_opts:
     css_class: "highlight"
     span:
@@ -280,6 +281,8 @@ defaults:
 sass:
   style: compressed
 
+mathjax:
+  enable: true
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
@@ -288,7 +291,6 @@ jekyll-minifier:
   exclude: ["robots.txt", "assets/js/search/*.js"]
   uglifier_args:
     harmony: true
-  enable: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
