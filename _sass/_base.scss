@@ -1304,3 +1304,20 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+// th {
+//   background-color: #060606; /* Optional: Add background color to headers */
+// }

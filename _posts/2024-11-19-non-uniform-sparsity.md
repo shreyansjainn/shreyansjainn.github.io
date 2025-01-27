@@ -80,14 +80,15 @@ To validate this from a different direction, I tried analyzing the number of fea
 
 We can see, that the Frobenium Norm value in the case of Uniform Sparsity is the highest when compared to all the cases of Non-Uniform Sparsity which indicates the number of features represented when sparsity is uniform will most likely always be higher than when compared to non-uniform sparsity.
 
-|                                                |           |
-| ---------------------------------------------- | --------- |
-| Scenario                                       | Frob Norm |
-| Uniform Sparsity (Instance of lowest sparsity) | 7.55      |
-| Case 1 (Max of all the instances)              | 4.98      |
-| Case 2 (Max of all the instances)              | 6.6       |
-| Case 3 (Max of all the instances)              | 5.75      |
-| Case 4 (Max of all the instances)              | 6.43      |
+|                    Scenario                    | Frob Norm |
+| :--------------------------------------------: | :-------: |
+| Uniform Sparsity (Instance of lowest sparsity) |   7.55    |
+|       Case 1 (Max of all the instances)        |   4.98    |
+|       Case 2 (Max of all the instances)        |    6.6    |
+|       Case 3 (Max of all the instances)        |   5.75    |
+|       Case 4 (Max of all the instances)        |   6.43    |
+
+<br>
 
 ## Effects on Superposition
 
