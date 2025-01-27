@@ -76,8 +76,6 @@ jobs:
         with:
           ruby-version: "3.4.1"
           bundler-cache: true
-        env:
-          BUNDLE_LOG_LEVEL: debug
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
