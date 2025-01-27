@@ -280,8 +280,6 @@ defaults:
 sass:
   style: compressed
 
-jekyll-minifier:
-  enable: false
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
 # -----------------------------------------------------------------------------
@@ -290,6 +288,7 @@ jekyll-minifier:
   exclude: ["robots.txt", "assets/js/search/*.js"]
   uglifier_args:
     harmony: true
+  enable: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Archives
