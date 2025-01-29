@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toy Models prefer pentagon geometry over everything else, why?
-date: 2025-01-31 2:40:16
+date: 2025-01-28 2:40:16
 description:
 tags: mech-interp, superposition
 categories:
