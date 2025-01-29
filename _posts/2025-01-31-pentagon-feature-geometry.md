@@ -33,8 +33,8 @@ I wanted to understand and analyze in detail why is this the case and if it can 
 <br>
 
 <p align="center">
-  <img src="./assets/img/pentagon_feature_geometry/n_6_superposition.png" width="200"/>
-  <img src="./assets/img/pentagon_feature_geometry/n_7_superposition.png" width="200" />
+  <img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/n_6_superposition.png" width="200"/>
+  <img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/n_7_superposition.png" width="200" />
   <br>
   <b> Fig.1 - n_features = 6 (left) and 7 (right) </b>
 </p>
@@ -45,7 +45,7 @@ Before we dive deep into feature geometry and our experiments, I would like to e
 
 The amount of data used to train the model has a massive impact on the types of features the model learns. [Superposition, Memorization, and Double Descent](https://transformer-circuits.pub/2023/toy-double-descent/index.html) showcase the impact of data regimes and how the model memorizes the dataset as features in low data regimes but transitions to learning generalizable features as the amount of data increases.
 
-![](../assets/img/pentagon_feature_geometry/double_descent_img.png)
+<img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/double_descent_img.png" width="900" height="550" align="center" />
 <b> Fig.2 - As we increase the data size, features transition from data features towards generalizing features and the geometry converges to a pentagon. Source: https://transformer-circuits.pub/2023/toy-double-descent/index.html </b>
 
 We’ll be focusing on the infinite data regimes as that represents the closest condition to real-world models due to the sheer size of datasets they are trained on and as we can see, when we increase the data size, the feature geometry transitions towards the pentagon geometry we talked about, while earlier, the no of features represented were much higher in lower data regimes.
@@ -58,22 +58,23 @@ The key factors governing the feature geometry is the balance between the overal
 
 We can define the expected loss due to ignoring a single feature by:
 
-![](../assets/img/pentagon_feature_geometry/annotated_ignored_loss.png)
+<img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/annotated_ignored_loss.png" width="900" height="450" align="center" />
 
 Note: We are considering a sparse regime, as only sparse features are represented in superposition and $S$ represents the probability of $x_i$ being 0 otherwise it takes a value uniformly sampled between 0 and 1.
 
 While the predicted value of $x_i'$ (when the feature is not ignored) can be defined by:
 
-![](../assets/img/pentagon_feature_geometry/predicted_value_represented.png)
+<img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/predicted_value_represented.png" width="900" height="350" align="center" />
 
 The formula represents the predicted value in the form of the original input value and then bakes in the influence of nearest neighbouring features (if it is positive interference or negative interference). $mod F$ term helps us wrap around the features around every $F$ positions and $(i \pm 1 \mod F)$ refer to the nearest neighbours represented feature index.
 
 After putting the above predicted term formula in the MSE loss formula, we get the below term representing the Loss due to the represented features.
-![](../assets/img/pentagon_feature_geometry/Represented_loss_annotated.png)
+
+<img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/Represented_loss_annotated.png" width="900" height="350" align="center" />
 
 Currently, we have two Loss terms, and based on no of features represented, two loss terms will be pulling the overall loss in opposing directions. Loss due to represented features will increase when we increase the no of represented features due to increased interference from neighbouring features, but we want to avoid the Loss due to ignored features as well. So, the entity we want to minizmise is the difference between $L_F$ and $L_{\text{ignored}}$ i.e.
 
-![](../assets/img/pentagon_feature_geometry/loss_difference_annotated.png)
+<img src="{{site.baseurl}}/assets/img/pentagon_feature_geometry/loss_difference_annotated.png" width="900" height="350" align="center" />
 
 When we optimize for $\Delta L$, we reach the optimal point of lowest loss at $F=5$.
 
