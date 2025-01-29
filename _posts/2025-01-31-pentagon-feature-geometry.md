@@ -7,8 +7,6 @@ tags: mech-interp, superposition
 categories:
 ---
 
-Repost from LessWrong, check out th LW post [here](https://www.lesswrong.com/posts/WwxG8RRHrorJgpoAk/effects-of-non-uniform-sparsity-on-superposition-in-toy)
-
 # Abstract
 
 For the past couple of years, toy models have been extensively studied in the field of mechanistic interpretability. We studied the introduction of superposition, feature geometry, and how correlation/anticorrelation/uncorrelated features arrange themselves in either situation. This work is my attempt to empirically validate and analyze why feature geometry in the infinite data regime for a ReLU model (with hidden=2) caps at a Pentagon geometry irrespective of the number of inputs and contribute to a better understanding of feature geometry in neural networks.
@@ -35,8 +33,8 @@ I wanted to understand and analyze in detail why is this the case and if it can 
 <br>
 
 <p align="center">
-  <img src="../assets/img/pentagon_feature_geometry/n_6_superposition.png" width="200"/>
-  <img src="../assets/img/pentagon_feature_geometry/n_7_superposition.png" width="200" />
+  <img src="./assets/img/pentagon_feature_geometry/n_6_superposition.png" width="200"/>
+  <img src="./assets/img/pentagon_feature_geometry/n_7_superposition.png" width="200" />
   <br>
   <b> Fig.1 - n_features = 6 (left) and 7 (right) </b>
 </p>
