@@ -24,7 +24,7 @@ my aim is to work full time on ML interpretability research because personally, 
 
 as of june 1st, i've been on a career break from my full time Applied ML job and working independently on interpretability research projects. During this time:
 
-- worked on creating an open source package for [visualizing the training dynamics and latent states of a neural network](https://github.com/shreyansjainn/visualizing-training) as an independent contributor along with a team from NYU. our [blogpost](https://openreview.net/forum?id=ap71o6yXUQ) on this was accepted for a poster in ICLR 2025.
+- worked on creating an open source package for [visualizing the training dynamics and latent states of a neural network](https://github.com/shreyansjainn/visualizing-training) as an independent contributor along with a team from NYU. our [blogpost](https://iclr-blogposts.github.io/2025/blog/visualizing-training/) on this was accepted for a poster in ICLR 2025.
 - published my analysis on [effects of non-uniform sparsity in toy models](https://www.lesswrong.com/posts/WwxG8RRHrorJgpoAk/effects-of-non-uniform-sparsity-on-superposition-in-toy)
 - attended AISF Alignment Cohort by Bluedot and published my analysis on [feature geometry in toy models](https://shreyansjainn.github.io/blog/2025/pentagon-feature-geometry/)
 - currently working on relational composition in large language models, you can follow my experiments [here](https://github.com/shreyansjainn/mech-interp)
