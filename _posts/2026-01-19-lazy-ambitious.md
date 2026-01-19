@@ -3,7 +3,7 @@ layout: post
 title: Lazy Ambitious or Overthinking?
 date: 2026-01-18 10:40:16
 description:
-tags: overthinking, ambition
+tags: overthinking ambition
 categories:
 ---
 
@@ -11,7 +11,7 @@ This thought has been churning in my head for quite a while, but it got triggere
 
 In past couple of years, my way of thinking has taken a turn for bad i feel, where i feel, anything that doesn’t sound interesting to do, or requires any brain power, or a solution is known is not worth doing and I’m wasting my time in doing that. It can be some coding task, where the solution is known, I dont have to spend a lot of power in figuring it out, but I still have to implement it, but my brain starts signalling that because it is known, so its automatically boring and then i procrastinate that work till eternity, and this for an Independent Researcher, where you’re your own supervisor and accountability partner, is a pretty big nightmare.
 
-So many times I catch myself day dreaming about the “interesting” life i’ll start leading the moment i become a full-time researcher, where i’m getting paid for doing research and i dont have to stress about money (thats a topic for different day), i’ll just be free bird in its own paradise, but I miss out on the most obvious reality that these banal tasks will still be part of my day to day and are pretty important for the final result to be shared across, and when the reality doesn’t meet your hyped up expectations, you start questioning whether if this was even worth the pain and effort, had a i glamorised it too much (yes, i had), and the most existential of the lot, do i even wanted to do this in the first place or was i just interested in the idea of doing research and not the actual work.
+So many times I catch myself day dreaming about the “interesting” life i’ll start leading the moment i become a full-time researcher, where i’m getting paid for doing research and i dont have to stress about money (thats a topic for different day), i’ll just be free bird in its own paradise, but I miss out on the most obvious reality that these banal tasks will still be part of my day to day and are pretty important for the final result to be shared across, and when the reality doesn’t meet your hyped up expectations, you start questioning whether if this was even worth the pain and effort, had i glamorised it too much (yes, i had), and the most existential of the lot, do i even wanted to do this in the first place or was i just interested in the idea of doing research and not the actual work.
 
 Don’t get me wrong, when push comes to shove, I’ll definitely finish the banal tasks as well, and before the committed deadline, but it’ll definitely feel like dragging a heap of wet sack and not a piece of work which leaves you satisfied at the end of the day, which is a pretty messed up thing, cause you should feel satisfied even in completing the so called “banal” part of work, cause its important. But, that push, which only if it coming from external sources, works for me, and i’m not able to motivate myself on my own to create that push.
 

@@ -3,7 +3,7 @@ layout: post
 title: Feature Geometry in Toy Models - Pentagon vs Hexagon
 date: 2025-01-28 2:40:16
 description:
-tags: mech-interp, superposition
+tags: mech-interp superposition
 categories:
 ---
 

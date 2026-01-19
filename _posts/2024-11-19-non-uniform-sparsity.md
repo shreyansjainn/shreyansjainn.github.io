@@ -3,7 +3,7 @@ layout: post
 title: Effects of Non-Uniform Sparsity on Superposition in Toy Models
 date: 2024-11-19 2:40:16
 description:
-tags: mech-interp, superposition
+tags: mech-interp superposition
 categories:
 ---
 
