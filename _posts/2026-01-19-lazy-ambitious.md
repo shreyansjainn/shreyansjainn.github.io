@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lazy Ambitious or Overthinking?
-date: 2026-01-19 12:40:16
+date: 2026-01-18 10:40:16
 description:
 tags: overthinking, ambition
 categories:
