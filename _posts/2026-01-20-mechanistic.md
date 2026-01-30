@@ -96,7 +96,7 @@ Modern MI work often uses linear probes to project model states into interpretab
 - Sensitivity to probe capacity
 - Ambiguity about what is truly encoded vs. what the probe learns
 
-### Cultural, Not Just Methodological, Differences
+## Cultural, Not Just Methodological, Differences
 
 During the early days, machine-learning in general was primarily attributed to computer vision research and lot of interpretability works were being done in CV only, shaping the methods NLP researchers adopted. The MI term itself was first used in CV contexts before migrating to NLP after breakthroughs like GPT-3.
 
@@ -109,13 +109,13 @@ The absence of NLPI researchers from online forums was misread as disinterest, w
 
 When MI researchers began publishing in conferences, they faced criticism for limited engagement with prior NLPI literature. Despite this, MI rapidly attracted resources, attention, and prestige, leading many NLPI researchers to adopt MI terminology.
 
-## “Everyone Is Mechanistic Now”
+# “Everyone Is Mechanistic Now”
 
 Today, most interpretability researchers identify, at least loosely, with MI. Funding and visibility have accelerated this shift, but terminology alone has not unified the field.
 
 Despite methodological overlap, differences in norms, goals, and epistemology remain.
 
-## Why This Still Matters
+# Why This Still Matters
 
 For all the confusion and tension it introduced, the MI community has played a major role in revitalizing interpretability research. Its energy, resources, and ambition have expanded the field’s reach.
 
