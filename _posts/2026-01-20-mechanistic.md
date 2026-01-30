@@ -9,7 +9,7 @@ categories:
 
 Recently I've been really questionning the field of Interpretability, in terms of its potential future, potential for success and the differences it can make, so I've been thinking about it from a more fundamental level, mainly to improve my understanding from a meta pov as well as technical, so I thought I should do an exercise where I try to jot down my notes of a paper in my own language and share it across. These are my interpretations and notes on the paper, so I apologise in advance for any misinterpretation or mistakes.
 
-First Paper I've chosen is a paper named [`Mechanistic?`](https://arxiv.org/abs/2410.09087). It takes about the origins of Mechanistic Interpretability as a term, a field of research and a community. So here we go...
+First Paper I've chosen is a paper named [`Mechanistic?`](https://arxiv.org/abs/2410.09087). It talks about the origins of Mechanistic Interpretability as a term, a field of research and a community. So here we go...
 
 <br>
 
