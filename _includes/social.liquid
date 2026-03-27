@@ -128,3 +128,8 @@
   </div>
   {% include scripts/wechatModal.liquid %}
 {% endif %}
+{% if site.cv_url %}
+  <a href="{{ site.cv_url }}" target="_blank" title="CV">
+    <i class="fas fa-file-alt"></i>
+  </a>
+{% endif %}

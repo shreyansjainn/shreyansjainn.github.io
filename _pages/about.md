@@ -22,12 +22,17 @@ i am shreyans.
 
 my aim is to work full time on ML interpretability research because personally, i would like to understand more about whats going under the hood of a complex AI system responsible for deciding whether its a dog or a cat or what word i should be typing next. in addition, my interest lies in reinforcement learning, ai ethics as well so i try to keep myself up to date on these topics too.
 
-as of june 1st, i've been on a career break from my full time Applied ML job and working independently on interpretability research projects. During this time:
+Currently, I'm working independently on interpretability research projects along with some fellowships and internships along the way. During this time i:
 
+- published:
+  - [Measure what Matters: Psychometric Evaluation of AI with Situational Judgment Tests](https://arxiv.org/abs/2510.22170)
+  - [Sycophancy as compositions of Atomic Psychometric Traits](https://arxiv.org/abs/2508.19316)
+  - [Towards discovering linguistic indicators for misalignment in language models](https://zenodo.org/records/16988484)
 - worked on creating an open source package for [visualizing the training dynamics and latent states of a neural network](https://github.com/shreyansjainn/visualizing-training) as an independent contributor along with a team from NYU. our [blogpost](https://iclr-blogposts.github.io/2025/blog/visualizing-training/) on this was accepted for a poster in ICLR 2025.
 - published my analysis on [effects of non-uniform sparsity in toy models](https://www.lesswrong.com/posts/WwxG8RRHrorJgpoAk/effects-of-non-uniform-sparsity-on-superposition-in-toy)
 - attended AISF Alignment Cohort by Bluedot and published my analysis on [feature geometry in toy models](https://shreyansjainn.github.io/blog/2025/pentagon-feature-geometry/)
-- currently working on relational composition in large language models, you can follow my experiments [here](https://github.com/shreyansjainn/mech-interp)
+- worked on relational composition in large language models, you can follow my experiments [here](https://github.com/shreyansjainn/mech-interp)
+- am currently working on projects around Behaviour Compositions and Multi-Lingual Interp.
 
 i'm open to full-time/part-time/internship opportunities or collaborations around interpretability research. you can reach out to me at `jshrey8@gmail.com`
 
