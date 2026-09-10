@@ -30,10 +30,11 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        # npm install (not `npm ci`) works around an npm bug where platform-
-        # specific optional deps (e.g. @rollup/rollup-linux-x64-gnu) are skipped
-        # on CI even when present in the lockfile. https://github.com/npm/cli/issues/4828
-        run: npm install --no-audit --no-fund
+        # Remove the lockfile so npm resolves platform-specific optional deps
+        # (e.g. @rollup/rollup-linux-x64-gnu) fresh on the Linux runner. A
+        # lockfile generated on macOS omits them and breaks the build.
+        # https://github.com/npm/cli/issues/4828
+        run: rm -f package-lock.json && npm install --no-audit --no-fund
 
       - name: Build
         run: npm run build
