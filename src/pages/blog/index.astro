@@ -83,11 +83,18 @@ const fmt = (d: Date) =>
     font-size: 0.82rem;
     color: var(--faint);
   }
+  .meta time {
+    color: var(--accent);
+  }
   .tag {
-    background: var(--accent-soft);
     color: var(--muted);
-    padding: 0.1rem 0.5rem;
-    border-radius: 20px;
+    padding: 0.05rem 0.4rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .tag::before {
+    content: "#";
+    color: var(--accent);
   }
   .tag.ext {
     display: inline-flex;

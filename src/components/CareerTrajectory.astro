@@ -1,0 +1,220 @@
+---
+// Career as a training trajectory: an 8-year industry plateau, a phase
+// transition at the pivot, then research phases as an up-and-down curve.
+// Schematic — the y-axis ("anxiety") is rhythm, not measured values.
+const industry = {
+  headline: '8 yrs · production ML',
+  sub: 'Fractal → Hotstar → BookMyShow → GEP → Physarum',
+};
+const nodes = [
+  { org: 'start of independent research', period: 'Jun 2024', x: 400, y: 178, side: 'below', dy: 20 },
+  { org: 'Thoughtworks', period: 'Aug 2025', x: 560, y: 104, side: 'above', dy: 0 },
+  { org: 'Martian', period: 'Dec 2025', x: 648, y: 188, side: 'below', dy: 0 },
+  { org: 'Thoughtworks', period: 'Apr 2026', x: 748, y: 96, side: 'above', dy: 0 },
+  { org: 'LASR Labs', period: 'Jul 2026', x: 854, y: 56, side: 'above', dy: 0 },
+];
+const curve = `380,205 ${nodes.map((n) => `${n.x},${n.y}`).join(' ')}`;
+const ariaLabel =
+  'Career trajectory: eight years in production ML through 2024, then research phases — ' +
+  nodes.map((n) => `${n.org} (${n.period})`).join(', ');
+---
+<figure class="ct">
+  <div class="ct-scroll">
+    <svg viewBox="0 0 900 320" role="img" aria-label={ariaLabel}>
+      <!-- axes -->
+      <line class="axis" x1="30" y1="255" x2="882" y2="255" />
+      <line class="axis" x1="30" y1="255" x2="30" y2="46" />
+      <polygon class="axis-arrow" points="26,52 34,52 30,42" />
+      <text class="yaxis-label" x="16" y="150" text-anchor="middle" transform="rotate(-90 16 150)">anxiety →</text>
+
+      <!-- time ticks -->
+      {[['2016', 40], ['2020', 210], ['2024', 380], ['2025', 610], ['2026', 800]].map(
+        ([label, x]) => (
+          <g class="tick">
+            <line x1={x} y1="252" x2={x} y2="260" />
+            <text x={x} y="276" text-anchor="middle">{label}</text>
+          </g>
+        )
+      )}
+
+      <!-- industry plateau -->
+      <rect class="plateau-fill" x="40" y="205" width="340" height="50" />
+      <line class="plateau" x1="40" y1="205" x2="380" y2="205" />
+      <text class="ind-head" x="210" y="168" text-anchor="middle">{industry.headline}</text>
+      <text class="ind-sub" x="210" y="188" text-anchor="middle">{industry.sub}</text>
+
+      <!-- phase transition -->
+      <line class="pivot" x1="385" y1="38" x2="385" y2="255" />
+      <text class="pivot-label" x="392" y="44">↳ pivot to interpretability</text>
+
+      <!-- research trajectory -->
+      <polyline class="curve" points={curve} />
+      {
+        nodes.map((n, i) => {
+          const above = n.side === 'above';
+          const orgY = above ? n.y - 34 : n.y + 36 + n.dy;
+          const perY = above ? n.y - 22 : n.y + 48 + n.dy;
+          const connEnd = above ? n.y - 16 : n.y + 20 + n.dy;
+          return (
+            <g class="pt" style={`--d:${1 + i * 0.13}s`}>
+              <line class="conn" x1={n.x} y1={n.y} x2={n.x} y2={connEnd} />
+              <circle class="node" cx={n.x} cy={n.y} r="5.5" />
+              <text class="lbl-org" x={n.x} y={orgY} text-anchor="middle">{n.org}</text>
+              <text class="lbl-per" x={n.x} y={perY} text-anchor="middle">{n.period}</text>
+            </g>
+          );
+        })
+      }
+    </svg>
+  </div>
+  <figcaption>
+    <span class="fig">Fig.&nbsp;2</span> — a career, plotted against the only metric that
+    reliably tracked it: <em>anxiety</em>. Not to scale; regrettably accurate.
+  </figcaption>
+</figure>
+
+<style>
+  .ct {
+    margin: 0.4rem 0 0.5rem;
+  }
+  .ct-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .ct svg {
+    width: 100%;
+    min-width: 640px;
+    height: auto;
+    overflow: visible;
+  }
+  figcaption {
+    margin: 1rem auto 0;
+    max-width: 640px;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  figcaption .fig {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  figcaption em {
+    color: var(--text);
+  }
+
+  .axis {
+    stroke: var(--border);
+    stroke-width: 1;
+  }
+  .axis-arrow {
+    fill: var(--border);
+  }
+  .yaxis-label {
+    fill: var(--faint);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+  .tick line {
+    stroke: var(--border);
+    stroke-width: 1;
+  }
+  .tick text {
+    fill: var(--faint);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .plateau-fill {
+    fill: var(--accent-soft);
+    opacity: 0.5;
+  }
+  .plateau {
+    stroke: var(--muted);
+    stroke-width: 2;
+    stroke-dasharray: 3 3;
+  }
+  .ind-head {
+    fill: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .ind-sub {
+    fill: var(--muted);
+    font-size: 11px;
+  }
+
+  .pivot {
+    stroke: var(--accent-line);
+    stroke-width: 1;
+    stroke-dasharray: 2 3;
+  }
+  .pivot-label {
+    fill: var(--accent);
+    font-size: 11px;
+  }
+
+  .curve {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2.2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-dasharray: 1700;
+    stroke-dashoffset: 1700;
+    animation: ctdraw 1.9s ease forwards 0.2s;
+  }
+  .node {
+    fill: var(--accent);
+    stroke: var(--bg);
+    stroke-width: 2;
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ctpop 0.4s ease forwards;
+    animation-delay: var(--d);
+  }
+  .conn {
+    stroke: var(--border);
+    stroke-width: 1;
+  }
+  .lbl-org {
+    fill: var(--text);
+    font-size: 11.5px;
+    font-weight: 600;
+  }
+  .lbl-per {
+    fill: var(--faint);
+    font-size: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+  @keyframes ctdraw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes ctpop {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .curve {
+      stroke-dashoffset: 0;
+      animation: none;
+    }
+    .node {
+      opacity: 1;
+      animation: none;
+    }
+  }
+</style>
