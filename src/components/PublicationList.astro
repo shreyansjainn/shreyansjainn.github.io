@@ -1,0 +1,115 @@
+---
+import type { Publication } from '../data/publications';
+import Icon from './Icon.astro';
+interface Props {
+  items: Publication[];
+}
+const { items } = Astro.props;
+---
+<ol class="pubs">
+  {
+    items.map((p) => (
+      <li class="pub">
+        <div class="pub-year">{p.year}</div>
+        <div class="pub-body">
+          <h3 class="pub-title">{p.title}</h3>
+          <p class="pub-authors">
+            {p.authors.map((a, i) => (
+              <>
+                <span class={a.me ? 'me' : ''}>
+                  {a.name}
+                  {a.eq ? '*' : ''}
+                </span>
+                {i < p.authors.length - 1 ? ', ' : ''}
+              </>
+            ))}
+          </p>
+          <p class="pub-meta">
+            <span class="venue">{p.venue}</span>
+            {p.status && p.status !== p.venue ? <span class="status">{p.status}</span> : null}
+            {p.links?.map((l) => (
+              <a class="pub-link" href={l.href} target="_blank" rel="noopener">
+                {l.label}
+                <Icon name="external" size={12} />
+              </a>
+            ))}
+          </p>
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .pubs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .pub {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1rem;
+  }
+  .pub-year {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.85rem;
+    color: var(--faint);
+    padding-top: 0.15rem;
+  }
+  .pub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+  .pub-authors {
+    margin: 0 0 0.3rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .pub-authors .me {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .pub-meta {
+    margin: 0;
+    font-size: 0.85rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .venue {
+    color: var(--text);
+    font-weight: 500;
+  }
+  .status {
+    color: var(--faint);
+    font-style: italic;
+  }
+  .pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.82rem;
+    padding: 0.05rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .pub-link:hover {
+    border-color: var(--accent);
+    text-decoration: none;
+  }
+  @media (max-width: 480px) {
+    .pub {
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+    .pub-year {
+      padding-top: 0;
+    }
+  }
+</style>

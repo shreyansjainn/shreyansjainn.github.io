@@ -1,0 +1,51 @@
+---
+import { site, socials } from '../data/site';
+import Icon from './Icon.astro';
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="wrap wrap-wide footer-inner">
+    <div class="socials">
+      {
+        socials.map((s) => (
+          <a href={s.href} aria-label={s.label} target={s.href.startsWith('http') ? '_blank' : undefined} rel="noopener">
+            <Icon name={s.icon} size={18} />
+          </a>
+        ))
+      }
+    </div>
+    <p class="colophon muted">
+      © {year} {site.name}. Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    margin-top: 1rem;
+    padding-block: 2rem;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .socials {
+    display: flex;
+    gap: 0.9rem;
+  }
+  .socials a {
+    color: var(--muted);
+    display: inline-flex;
+  }
+  .socials a:hover {
+    color: var(--accent);
+  }
+  .colophon {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+</style>

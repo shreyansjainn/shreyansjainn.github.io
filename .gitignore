@@ -11,3 +11,8 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Astro
+dist/
+.astro/
+npm-debug.log*

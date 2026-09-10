@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title="Writing" description="Research notes and essays by Shreyans Jain.">
+  <div class="wrap" style="padding-block: 3rem;">
+    <p class="eyebrow">Writing</p>
+    <h1 style="font-size: 2rem; margin: 0 0 0.6rem;">Notes &amp; essays</h1>
+    <p class="muted" style="margin: 0 0 2.4rem;">
+      Interpretability research notes, paper notes, and the occasional personal essay.
+    </p>
+
+    <ul class="posts">
+      {
+        posts.map((p) => (
+          <li class="post">
+            <a class="post-main" href={`/blog/${p.id}`}>
+              <h2>{p.data.title}</h2>
+              {p.data.description && <p class="desc muted">{p.data.description}</p>}
+            </a>
+            <div class="meta">
+              <time datetime={p.data.date.toISOString()}>{fmt(p.data.date)}</time>
+              {p.data.tags.map((t) => <span class="tag">{t}</span>)}
+              {p.data.external && (
+                <a class="tag ext" href={p.data.external} target="_blank" rel="noopener">
+                  cross-posted <Icon name="external" size={11} />
+                </a>
+              )}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .posts {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .post {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .post:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+  .post-main {
+    color: var(--text);
+    display: block;
+  }
+  .post-main:hover {
+    text-decoration: none;
+  }
+  .post h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.35rem;
+  }
+  .post-main:hover h2 {
+    color: var(--accent);
+  }
+  .desc {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--faint);
+  }
+  .tag {
+    background: var(--accent-soft);
+    color: var(--muted);
+    padding: 0.1rem 0.5rem;
+    border-radius: 20px;
+  }
+  .tag.ext {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+</style>
