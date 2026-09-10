@@ -109,7 +109,7 @@ const SecHead = 'div';
         </div>
       </div>
 
-      <h3 class="subhead">Career trajectory</h3>
+      <h3 class="traj-title">career trajectory <span class="vs">vs</span> <span class="anx">anxiety levels</span></h3>
       <CareerTrajectory />
     </div>
   </section>
@@ -404,6 +404,19 @@ const SecHead = 'div';
     grid-template-columns: 1.1fr 0.9fr;
     gap: 1.8rem;
     margin-top: 0.5rem;
+  }
+  .traj-title {
+    font-size: 1.2rem;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+    margin: 2.8rem 0 0.4rem;
+  }
+  .traj-title .vs {
+    color: var(--faint);
+    font-weight: 400;
+  }
+  .traj-title .anx {
+    color: var(--accent);
   }
 
   /* ---- chips ---- */
